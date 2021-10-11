@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "ترتیبات",
+    "menuAbout": " اپلیکیشن کے بارے میں",
+    "menuHelp": "مدد",
+    "popupBackToExit": "باہر نکلنے کے لئے دوبارہ 'واپس' دبائیں  ",
+    "deviceUptime": "آلے کا اپ ٹائم"
+  },
+  "ScreenHome": {
+    "homeTitle": "گھر",
+    "graphTempLabel": "حرارت سینسر",
+    "graphHumidLabel": "نمی سینسر",
+    "buttonPing": "آلہ پر پنگ",
+    "buttonBeep": "آلہ پر گھنٹی",
+    "buttonPort1On": "کھولیں",
+    "buttonPort1Off": "بند کریں",
+    "buttonPort2On": "کھولیں",
+    "buttonPort2Off": "بند کریں",
+    "logConnectionStatus": "کنکشن کی صورتحال"
+  },
+  "ScreenAbout": {
+    "aboutTitle": " اپلیکیشن کے بارے میں",
+    "appDescription": "ESP کی بنیاد پر بنائے گئے IoT ڈیوائس کا ڈیٹا ڈسپلے اور کنٹرول کرنے کے لئے اپلیکشن.",
+    "copyright": "® My IOT Company © - جملہ حقوق محفوظ ہیں.",
+    "license": "App by My IoT Company® is distributed under a Creative Commons Attribution - Non Commercial - No derivatives 4.0 International License.",
+    "sayHelloLabel": "ہیلو کہیں",
+    "emailAddress": "hello@orison.biz",
+    "emailSubject": "ہیلو",
+    "privacyPolicyLabel": "پرائیویسی پالیسی",
+    "privacyPolicyUrl": "https://orison.biz/privacy-policy/؟lang=ur",
+    "viewReadMe": "Readme دیکھیں",
+    "viewChangelog": "Changelog دیکھیں",
+    "viewLicense": "License دیکھیں",
+    "openSourceLicenses": "اوپن سورس لائسنسز"
+  },
+  "ScreenSettings": {
+    "settingsTitle": "ترتیبات",
+    "sectionUISettings": "UI ترتیبات",
+    "languageLabel": "زبان",
+    "enableDarkTheme": "ڈارک تھیم فعال کریں",
+    "sectionMqttSettings": "MQTT ترتیبات",
+    "mqttBroker": "MQTT بروکر",
+    "mqttShowLogEntries": "ڈیوائس کا لَوگ دکھائیں",
+    "mqttBrokerError1": "بروکر خالی نہیں رہ سکتا",
+    "mqttPort": "MQTT پورٹ",
+    "mqttLogin": "MQTT لاگ ان",
+    "mqttPassword": "MQTT پاس ورڈ",
+    "mqttCredentials": "MQTT تصدیق نامے",
+    "mqttPortError1": "پورٹ خالی نہیں رہ سکتا",
+    "mqttPortError2": "پورٹ ایک نمبر ہونا ضروری ہے",
+    "mqttPortError3": "پورٹ 65535 سے زیادہ نہیں ہو سکتا",
+    "buttonSave": "محفوظ کریں",
+    "buttonCancel": "منسوخ کریں"
+  },
+  "ScreenHelp": {
+    "helpTitle": "مدد"
+  }
+}

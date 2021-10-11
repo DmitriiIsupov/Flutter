@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "إعدادات",
+    "menuAbout": "حول",
+    "menuHelp": "مساعدة",
+    "popupBackToExit": "اضغط مرة أخرى للخروج",
+    "deviceUptime": "جهاز الجهوزية"
+  },
+  "ScreenHome": {
+    "homeTitle": "الصفحة الرئيسية",
+    "graphTempLabel": "جهاز استشعار درجة الحرارة",
+    "graphHumidLabel": "جهاز استشعار الرطوبة",
+    "buttonPing": "جهاز بينغ",
+    "buttonBeep": "جهاز الصفارة",
+    "buttonPort1On": "افتح",
+    "buttonPort1Off": "أغلق",
+    "buttonPort2On": "افتح",
+    "buttonPort2Off": "أغلق",
+    "logConnectionStatus": "حالة الإتصال"
+  },
+  "ScreenAbout": {
+    "aboutTitle": "حول",
+    "appDescription": "تطبيق لعرض البيانات والتحكم وجهاز تقنيات عمليات مقرها ESP.",
+    "copyright": "محفوظة الحقوق - © بلدي تقنيات عمليات Company®.",
+    "license": "يتم توزيع التطبيق التي كتبها My تقنيات عمليات Company® بموجب جميل عزو - غير التجاري - لا مشتقات 4.0 الرخصة الدولية ل.",
+    "sayHelloLabel": "قل مرحبا",
+    "emailAddress": "hello@orison.biz",
+    "emailSubject": "مرحبا",
+    "privacyPolicyLabel": "سياسة خاصة",
+    "privacyPolicyUrl": "https://orison.biz/privacy-policy/؟lang=ar",
+    "viewReadMe": "عرض التمهيدي",
+    "viewChangelog": "مشاهدة التغيير",
+    "viewLicense": "ترخيص عرض",
+    "openSourceLicenses": "تراخيص مفتوحة المصدر"
+  },
+  "ScreenSettings": {
+    "settingsTitle": "",
+    "sectionUISettings": "إعدادات UI",
+    "languageLabel": "",
+    "enableDarkTheme": "تمكين الظلام موضوع",
+    "sectionMqttSettings": "إعدادات MQTT",
+    "mqttBroker": "MQTT وسيط",
+    "mqttShowLogEntries": "عرض جهاز تسجيل الدخول مقالات",
+    "mqttBrokerError1": "وسيط لا يمكن إفراغ",
+    "mqttPort": "ميناء MQTT",
+    "mqttLogin": "MQTT الدخول",
+    "mqttPassword": "MQTT كلمة المرور",
+    "mqttCredentials": "وثائق التفويض MQTT",
+    "mqttPortError1": "ميناء لا يمكن إفراغ",
+    "mqttPortError2": "يجب أن يكون الميناء رقم",
+    "mqttPortError3": "ميناء لا يمكن أن يكون أكبر من 65535",
+    "buttonSave": "حفظ",
+    "buttonCancel": "إلغاء"
+  },
+  "ScreenHelp": {
+    "helpTitle": "مساعدة"
+  }
+}

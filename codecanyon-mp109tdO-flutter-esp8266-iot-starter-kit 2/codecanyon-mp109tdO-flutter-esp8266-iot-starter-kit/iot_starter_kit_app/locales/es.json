@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "Configuración",
+    "menuAbout": "Acerca de",
+    "menuHelp": "Ayuda",
+    "popupBackToExit": "Presione de nuevo para salir",
+    "deviceUptime": "dispositivo de tiempo de actividad"
+  },
+  "ScreenHome": {
+    "homeTitle": "Hogar",
+    "graphTempLabel": "Sensor de temperatura",
+    "graphHumidLabel": "Sensor de humedad",
+    "buttonPing": "dispositivo de ping",
+    "buttonBeep": "dispositivo pitido",
+    "buttonPort1On": "Abierto",
+    "buttonPort1Off": "Cerrar",
+    "buttonPort2On": "Abierto",
+    "buttonPort2Off": "Cerrar",
+    "logConnectionStatus": "Estado de conexión"
+  },
+  "ScreenAbout": {
+    "aboutTitle": "Acerca",
+    "appDescription": "Aplicación a la visualización de datos y control y dispositivos IO basado ESP.",
+    "copyright": "© My IoT Company® - Derechos reservados.",
+    "license": "App por My IoT Company® se distribuye bajo una licencia Creative Commons Atribución – No Comercial – Sin derivación 4.0 Internacional.",
+    "sayHelloLabel": "Di hola",
+    "emailAddress": "hello@orison.biz",
+    "emailSubject": "Hola",
+    "privacyPolicyLabel": "Política de privacidad",
+    "privacyPolicyUrl": "https://orison.biz/privacy-policy/?lang=es",
+    "viewReadMe": "Ver leéme",
+    "viewChangelog": "vista de cambios",
+    "viewLicense": "Ver licencia",
+    "openSourceLicenses": "Licencias de código abierto"
+  },
+  "ScreenSettings": {
+    "settingsTitle": "Configuraciones",
+    "sectionUISettings": "Configuración de la interfaz de usuario",
+    "languageLabel": "Idioma",
+    "enableDarkTheme": "Habilitar el tema oscuro",
+    "sectionMqttSettings": "Ajustes MQTT",
+    "mqttBroker": "MQTT Broker",
+    "mqttShowLogEntries": "Mostrar dispositivos entradas de registro",
+    "mqttBrokerError1": "Corredor no puede estar vacía",
+    "mqttPort": "Puerto MQTT",
+    "mqttLogin": "MQTT Login",
+    "mqttPassword": "MQTT contraseña",
+    "mqttCredentials": "Credenciales MQTT",
+    "mqttPortError1": "El puerto no puede estar vacía",
+    "mqttPortError2": "Puerto debe ser un número",
+    "mqttPortError3": "El puerto no puede ser mayor que 65535",
+    "buttonSave": "Salvar",
+    "buttonCancel": "Cancelar"
+  },
+  "ScreenHelp": {
+    "helpTitle": "Ayuda"
+  }
+}

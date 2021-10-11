@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Flutter App - ESP IoT Starter Kit Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Flutter App";
+    var mkdocs_page_input_path = "flutter-app.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> ESP IoT Starter Kit Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Welcome</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="flutter-app.html">Flutter App</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-the-flutter-app">Setting up the Flutter App</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#renaming-and-branding-the-app">Renaming and Branding the App</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-logo-and-launcher-icon">Updating Logo and Launcher Icon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-app-launcher-name">Updating App Launcher Name</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-package-name">Updating Package Name</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-and-updating-language-definitions">Adding and Updating Language Definitions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vs-code-extension-and-source-code">VS Code Extension and Source Code</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-google-translate-to-add-new-languages">Using Google Translate to Add New Languages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-app-ui-explained">The App UI Explained</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#home-screen">Home Screen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settings-screen">Settings Screen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#about-screen">About Screen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#help-screen">Help Screen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enabling-multiple-languages-in-markdown-files">Enabling Multiple Languages in Markdown Files</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="esp-firmware.html">ESP Firmware</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">ESP IoT Starter Kit Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Flutter App</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="flutter-application">Flutter Application</h1>
+<p>This section describes how to setup and brand the Flutter app source code for your own projects.</p>
+<h2 id="setting-up-the-flutter-app">Setting up the Flutter App</h2>
+<p>You must have Flutter development environment already setup to be able to open and run this Flutter app. We use Visual Studio Code and Flutter Plugin for Flutter development. You can follow these guides to setup the environment using VS Code:</p>
+<ul>
+<li><a href="https://flutter.dev/docs/development/tools/vs-code">https://flutter.dev/docs/development/tools/vs-code</a></li>
+<li><a href="https://flutter.dev/docs/get-started/editor?tab=vscode">https://flutter.dev/docs/get-started/editor?tab=vscode</a></li>
+</ul>
+<p>Once you have the dev environment ready, you can now open the flutter app.</p>
+<p>The .ZIP package contains a folder named <code>iot_starter_kit_app</code> which hosts the source code for the flutter app. Extract this folder and then right-click to open this folder with VS Code.</p>
+<p>You can start the app right away by hitting the <code>F5</code> key once you open the project folder in VS code, and it will ask to launch the app in an Emulator or your connected phone, if any.</p>
+<p>First build will take a bit longer as the Flutter SDK will download referenced libraries before compiling, it's a one time process.</p>
+<p>If everything goes well, and all the dev tools are properly installed, the app shall launch in the Emulator or connected phone.</p>
+<h2 id="renaming-and-branding-the-app">Renaming and Branding the App</h2>
+<p>Once you have successfully run the app on the emulator or mobile phone, you would want to brand it to your own project theme and icons. We have included some of the following flutter packages in the project’s <code>.yaml</code> file to update App’s Launcher Icon and App’s Launcher name, but we are mentioning here additional packages to update Android Package Name, iOS Bundle ID as well.</p>
+<p>Please follow the official documentation of the following packages to achieve these tasks:</p>
+<h3 id="updating-logo-and-launcher-icon">Updating Logo and Launcher Icon</h3>
+<ul>
+<li><a href="https://pub.dev/packages/flutter_launcher_icons">https://pub.dev/packages/flutter_launcher_icons</a></li>
+</ul>
+<h3 id="updating-app-launcher-name">Updating App Launcher Name</h3>
+<ul>
+<li><a href="https://pub.dev/packages/flutter_launcher_name">https://pub.dev/packages/flutter_launcher_name</a></li>
+</ul>
+<h3 id="updating-package-name">Updating Package Name</h3>
+<ul>
+<li><a href="https://pub.dev/packages/rename">https://pub.dev/packages/rename</a></li>
+<li><a href="https://pub.dev/packages/flutter_rename_app">https://pub.dev/packages/flutter_rename_app</a></li>
+<li><a href="https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter">https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter</a></li>
+</ul>
+<h2 id="adding-and-updating-language-definitions">Adding and Updating Language Definitions</h2>
+<p>The app implements multiple languages and supports RTL languages. We have used a wonderful VS Code Extension <code>flutter-internationalize</code> <a href="https://marketplace.visualstudio.com/items?itemName=apin.flutter-internationalize">Link</a> to manage, import and export translations and generate code. Our utility class <code>LocaleDelegate</code> in file <code>utils/locale_delegate.dart</code> takes care of the translation definitions.</p>
+<p>The extension <code>flutter-internationalize</code> lets you visually add new language definition JSON files, which are generated in the <code>locales/</code> folder and the Dart code for definitions is generated in the
+<code>/lib/generated/locale_base.dart</code> file.</p>
+<p><img alt="Firmware" src="media/vs-code-languages-5.png" /></p>
+<h3 id="vs-code-extension-and-source-code">VS Code Extension and Source Code</h3>
+<p>Please follow the steps below the setup new language, or update language labels for any specific language in the app.</p>
+<ol>
+<li>Setup app's locale list in the [_languages] HashMap
+   <img alt="Firmware" src="media/vs-code-languages-1.png" /></li>
+</ol>
+<p>The language setup here will automatically appear in the language drop-down on the settings screen.</p>
+<p><img alt="Firmware" src="media/screens/settings2.png" /></p>
+<ol>
+<li>
+<p>Install VS Code extension <code>flutter-internationalize</code> from <a href="https://marketplace.visualstudio.com/items?itemName=apin.flutter-internationalize">https://marketplace.visualstudio.com/items?itemName=apin.flutter-internationalize</a> to manage, import and export translations and generate code in the <code>/lib/generated</code> folder</p>
+</li>
+<li>
+<p>Setup your App widget for locale using <code>LocaleDelegate</code> class:
+   <img alt="Firmware" src="media/vs-code-languages-2.png" /></p>
+</li>
+<li>
+<p>Import /lib/generated/locale_base.dart file in your code file where you want to use translations</p>
+</li>
+<li>
+<p>Get a reference to the current language dictionary in your code using following call, usually in the build methods:
+   <img alt="Firmware" src="media/vs-code-languages-3.png" /></p>
+</li>
+</ol>
+<p>Or something like this:</p>
+<p><code>dart
+   final lang = Localizations.of&lt;LocaleBase&gt;(context, LocaleBase);</code></p>
+<p>Or load language directly on demand:</p>
+<p><code>dart
+   final lang = LocaleBase();
+   lang.load('locales/en_US.json').then((v) {
+   print(lang.HomeScreen.greeting);
+   }</code></p>
+<ol>
+<li>Now use the translations like this:</li>
+</ol>
+<p><code>dart
+   Text(lang.HomeScreen.greeting);
+   // output "Welcome!"
+   // the `lang.HomeScreen.user_greeting` is set as "Welcome {}!"
+   Text(LocaleDelegate.render(lang.HomeScreen.user_greeting, args: ["John"],));
+   // output "Welcome John!"</code></p>
+<ol>
+<li>Check <code>LocaleDelegate.render()</code> method on templated translations</li>
+</ol>
+<h3 id="using-google-translate-to-add-new-languages">Using Google Translate to Add New Languages</h3>
+<p>You can export language definitions in an Excel sheet using the Internationalize extension, then upload that excel sheet to Google Docs and use Google Translate formula: <code>=GOOGLETRANSLATE(cell with text, "source language", "target language")</code> in a new language column in each tab to translate from exiting languages to new languages.</p>
+<p><img alt="Firmware" src="media/vs-code-languages-4.png" /></p>
+<p>For example, if you want to add Persian language translated fro English, you would add a new column with header as language code <code>fa</code> and paste the Google Translate formula like this this the column:
+<code>=GOOGLETRANSLATE($I4, "en", "fa")</code> where:</p>
+<ul>
+<li><strong>$I4</strong> is the column with English text (source)</li>
+<li><strong>"en"</strong> is the source language</li>
+<li><strong>"fa"</strong> is the target language</li>
+</ul>
+<p>Once you have translated for the new language, you can download the <code>.xls</code> file, and import this file using the Internationalize extension, and it will generate appropriate <code>.json</code> file and corresponding dart code in your project.</p>
+<h2 id="the-app-ui-explained">The App UI Explained</h2>
+<h3 id="home-screen">Home Screen</h3>
+<p><img alt="Firmware" src="media/screens/home.png" /></p>
+<p>The home screen has Graphs for Temperature and Humidity data from the sensors on the device. This Graph shows current value of as big Label in the center and a line graph of last six values in the background. The App requests the sensor data every 5 seconds from the device.</p>
+<p>There is an event List View after the Graphs, which shows all the app events, form connectivty to commands ans responses. The list view only keep last 30 events in the cache.</p>
+<p>After the List View, there are Four buttons which send commands to the device and react upon response from the device. These are:</p>
+<ul>
+<li>
+<p><strong>Ping Button</strong>: Sends a "Ping" command to the device and changes its color, and resets the color back to normal on arrival of response form the device. This is used to check if the device is connected with the internet and is able to respond to other commands, without having to turn on/off and other port, or appliance with the port.</p>
+</li>
+<li>
+<p><strong>Beep Button</strong>: Sends a "Beep" command to the device and changes its color, and resets the color back to normal on arrival of response form the device. This is used to check if the device is connected with the internet and is able to respond to other commands with you are in the audible range with the device, without having to turn on/off and other port, or appliance with the port.</p>
+</li>
+<li>
+<p><strong>Port1 Button</strong>: This button demonstrate the "Bounce" effect on a port, where a port on the device is in One state permanently, then upon a command from the app, it change its state to other state for a amount of time, and then "Bounces" back the original state. This can be used in scenarios where you have to turn an appliance on for little amount of time, for example a door lock.</p>
+</li>
+<li>
+<p><strong>Port2 Button</strong>: This s simple toggle button, and be used to read and set the port state on demand. The button show what state the port currently is in and you can press the button to send a command to toggle the state of the port. This is useful to turn any connected appliance on or off, on demand.</p>
+</li>
+</ul>
+<p>The Home screen also has a drawer menu which show device uptime in the header:
+<img alt="Firmware" src="media/screens/menu.png" /></p>
+<h3 id="settings-screen">Settings Screen</h3>
+<p>The settings screen lets you set language, dark or light theme, MQTT credentials and if the List View on how page shall show the log entries from the device, which is sent on <code>/log</code> MQTT topic.</p>
+<p><img alt="Firmware" src="media/screens/settings1.png" /></p>
+<p><img alt="Firmware" src="media/screens/settings2.png" /></p>
+<p><img alt="Firmware" src="media/screens/settings3.png" /></p>
+<h3 id="about-screen">About Screen</h3>
+<p>This screen shows information about the application, and can be branded as per yor projects. The <strong>Readme</strong>, <strong>License</strong> and the <strong>Changelog</strong> screens are driven by Markdown file which a located in the <code>/assets/docs</code> folder. You can easily update the content of these files using standard Markdown Syntax without having to write Dart code. Please visit <a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a> for help on Markdown syntax and formatting.</p>
+<p><img alt="Firmware" src="media/screens/about.png" /></p>
+<h3 id="help-screen">Help Screen</h3>
+<p>You can use the Help screen to show general information on how to use the app. Like the <strong>Readme</strong>, <strong>License</strong> and the <strong>Changelog</strong> screens, <strong>Help</strong> screen is also driven by Markdown file <code>help_screen.md</code> which a located in the <code>/assets/docs</code> folder. You can easily update the content of these files using standard Markdown Syntax without having to write Dart code.</p>
+<h3 id="enabling-multiple-languages-in-markdown-files">Enabling Multiple Languages in Markdown Files</h3>
+<p>To provide content on additional languages in Markdown driven screen (<strong>Readme</strong>, <strong>License</strong>, <strong>Changelog</strong> and <strong>Help</strong>), you can place additional files with locale name in file names
+in the <code>assets/docs/</code> folder and the appropriate language file will be automatically picked by the app as per the current locale. For example, file <code>help_screen-fr.md</code> will be picked for when the French language is selected, and file <code>help_screen-ar.md</code> will be shown when the Arabic language is selected.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="esp-firmware.html" class="btn btn-neutral float-right" title="ESP Firmware">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="esp-firmware.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

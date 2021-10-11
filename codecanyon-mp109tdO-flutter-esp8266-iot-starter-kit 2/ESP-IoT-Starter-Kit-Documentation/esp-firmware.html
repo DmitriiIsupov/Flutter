@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>ESP Firmware - ESP IoT Starter Kit Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ESP Firmware";
+    var mkdocs_page_input_path = "esp-firmware.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> ESP IoT Starter Kit Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Welcome</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="flutter-app.html">Flutter App</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="esp-firmware.html">ESP Firmware</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-the-firmware-on-esp8266">Setting up the Firmware on ESP8266</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-the-firmware">Understanding the Firmware</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mqtt-protocol-for-the-device">MQTT Protocol for the Device</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#base-topic">Base Topic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topic-for-ping">Topic for Ping</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#topic-for-command">Topic for command</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#topic-for-response">Topic for response</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topics-for-ports">Topics for Ports</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#port-1-function-auto-close">Port 1 Function: Auto Close</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#port-2-function-toggle-state">Port 2 Function: Toggle State</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topic-for-sensor-data">Topic for Sensor Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topic-for-beeper">Topic for Beeper</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topic-for-uptime">Topic for Uptime</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topic-for-log">Topic for Log</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#device-functions">Device Functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#wifi-and-mqtt-configurations-in-ap-mode-and-captive-portal">WiFi and MQTT Configurations in AP Mode and Captive Portal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#status-led-blink-behavior">Status LED Blink Behavior</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#log-on-serial-port-and-mqtt">Log on Serial Port and MQTT</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#public-mqtt-broker-for-testing">Public MQTT Broker for Testing</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">ESP IoT Starter Kit Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>ESP Firmware</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="esp-firmware">ESP Firmware</h1>
+<p>This firmware is an ESP8266 based IoT device which provides a simple yet robust foundation for a commercial-grade IoT device for remote control and telemetry over MQTT protocol.</p>
+<p>This section will guide you through setting up the development environment and modifying key sections of code to customize it for your own projects.</p>
+<p>The device currently controls two IOs while providing a dedicated LED light with blink behaviors to show different states of the device, and a port for a beeper to provide audible feedback.</p>
+<p><img alt="Firmware Features" src="media/firmware-features.png" /></p>
+<h2 id="setting-up-the-firmware-on-esp8266">Setting up the Firmware on ESP8266</h2>
+<p>The firmware is setup and developed using open-source Visual Studio Code with PlatformIO extension for ease of environment setup and deployment.</p>
+<p>Download and install VS Code from following link:
+<a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p>
+<p>Install PlatformIO extension in VS Code from following link:
+<a href="https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide">https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide</a></p>
+<p>Once you have the dev environment ready, you can now open the firmware project.</p>
+<p>The .ZIP package contains a folder named <code>iot_starter_kit_firmware</code> which hosts the source code for the firmware. Extract this folder and then right-click to open this folder with VS Code.</p>
+<p>You can build the firmware right away by using the <code>Ctrl + Alt + B</code> shortcut once you open the project folder in VS code, or you deploy the firmware to NodeMCU compatible board by using the shortcut <code>Ctrl + Alt + U</code> and it will compile and upload the firmware to connected board via USB.</p>
+<p>First build will take a bit longer as the PlatformIO framework will download related SDKs and referenced libraries before compiling. This is a one time process.</p>
+<p>If everything goes well, and all the dev tools are properly installed, the firmware will be uploaded to connected ESP8266 based NodeMCU board.</p>
+<p>You will need to wire the ESP8266 board with components as per following diagram:</p>
+<p><img alt="Firmware" src="media/firmware.png" /></p>
+<h2 id="understanding-the-firmware">Understanding the Firmware</h2>
+<p>The Firmware code follows simple code practice with comments at complex logic or where necessary. It can be used as it is, modified as per requirement or parts of its routines can be used in other projects.</p>
+<h2 id="mqtt-protocol-for-the-device">MQTT Protocol for the Device</h2>
+<p>This section describes MQTT protocol implemented and how you can modified it as per your requirement.</p>
+<p>To setup private MQTT broker, you can download and install from link:
+<a href="https://mosquitto.org/download/">https://mosquitto.org/download/</a></p>
+<h3 id="base-topic">Base Topic</h3>
+<p><code>devices/esp01</code></p>
+<p>The base topic can be modified in the source code for the macro <code>_MQTT_BASE</code>.</p>
+<h3 id="topic-for-ping">Topic for Ping</h3>
+<h4 id="topic-for-command">Topic for command</h4>
+<p><code>devices/esp01/set/ping</code></p>
+<p>The device will subscribe to this topic on the given MQTT broker to listen for <strong><code>ping</code></strong>
+command in payload, and will publish response on the following topic:</p>
+<h4 id="topic-for-response">Topic for response</h4>
+<p><code>devices/esp01/get/ping</code></p>
+<p>Any client which wants to get the response to the ping command will subscribe to this topic.</p>
+<p>The device will send a reply as <strong><code>pong</code></strong> for <strong><code>ping</code></strong> command.</p>
+<h3 id="topics-for-ports">Topics for Ports</h3>
+<p>These MQTT topics are assigned to IO Ports and sending commands to these topics will change the status of the port.</p>
+<p><code>devices/esp01/set/port1</code></p>
+<p><code>devices/esp01/set/port2</code></p>
+<p>Listens to command <strong><code>open</code></strong> and send back <strong><code>open</code></strong> to the following topics:</p>
+<p><code>devices/esp01/get/port1</code></p>
+<p><code>devices/esp01/get/port2</code></p>
+<h4 id="port-1-function-auto-close">Port 1 Function: Auto Close</h4>
+<p>The defined <code>port1</code> uses only the <strong><code>open</code></strong> command from MQTT or from the input button and resets the associated pin for a small amount to time, as defined in the <code>_DELAY_BUTTON</code> macro and then automatically reverts to original state.</p>
+<h4 id="port-2-function-toggle-state">Port 2 Function: Toggle State</h4>
+<p>The <code>port2</code> is shown as the simple toggle function, which takes a command from MQTT or from the input button, and toggles its state as per the command <code>open</code> or <code>close</code>. The <code>get/port2</code> topic also uses the Retain functionality of MQTT to retain the last state of the port.</p>
+<h3 id="topic-for-sensor-data">Topic for Sensor Data</h3>
+<p>The device listens to command <strong><code>data</code></strong> on the following topic to publish sensor data from DHT sensor for Temperature and Humidity with system timestamp:</p>
+<p><code>devices/esp01/set/sensor_data</code></p>
+<p>The sensor data is sent back on the following topic:</p>
+<p><code>devices/esp01/get/sensor_data</code></p>
+<p>The data is sent as a JSON object, here is an example:</p>
+<pre><code class="language-JSON">{
+  &quot;Temp&quot;: &quot;23.10&quot;,
+  &quot;TempUnit&quot;: &quot;C&quot;,
+  &quot;Hum&quot;: &quot;15.20&quot;,
+  &quot;Time&quot;: &quot;04-Nov-2020 23:52:57&quot;
+}
+</code></pre>
+<p>Addtionally, the device also sends the above data every 5 minutes on the <code>get/sensor_data</code> topic which is a good example of receiving telemetry data periodically from the devices and using it for decision-making and presenting on IoT dashboards.</p>
+<h3 id="topic-for-beeper">Topic for Beeper</h3>
+<p><code>devices/esp01/set/beeper</code></p>
+<p>Sounds the beeper on the device when <strong><code>beep</code></strong> command is sent and replies on following topic with <strong><code>beep</code></strong>:</p>
+<p><code>devices/esp01/get/beeper</code></p>
+<h3 id="topic-for-uptime">Topic for Uptime</h3>
+<p><code>devices/esp01/uptime</code></p>
+<p>The device sends uptime on this topic every five minutes on this topic. Note that this topic uses Retain feature of MQTT protocol which retains the last message on the broker. This retained message is then delivered to any new client as it is connected to the broker and subscribes to this topic.</p>
+<h3 id="topic-for-log">Topic for Log</h3>
+<p><code>devices/esp01/log</code></p>
+<p>The device sends all events log to this topic.</p>
+<h2 id="device-functions">Device Functions</h2>
+<h3 id="wifi-and-mqtt-configurations-in-ap-mode-and-captive-portal">WiFi and MQTT Configurations in AP Mode and Captive Portal</h3>
+<p>The device supports persistent configuration for WiFi Access, MQTT Broker and its credentials.
+There are two ways to enter in the AP Mode to set these configuration:</p>
+<ol>
+<li>Keep the Button1 pressed at power on or reset and the device will enter the AP mode.</li>
+<li>Long-press Button1 for 8 seconds and the device will reboot and enter the AP mode on the next boot.</li>
+</ol>
+<p>Once on AP mode and you can find the device on your mobile WiFi discovery. The device implements the WiFi Captive Portal (Automatically redirects to the settings webpage), so as soon as you connect your PC or Smartphone to this device's WiFi Access Point, you will automatically be redirected to the WiFi and MQTT Settings page. On this page you can choose the AP with internet
+access which the device will use to connect to the internet, and also save your MQTT Broker, Port, Login and Password.</p>
+<p>Once you choose an AP and save your settings, the device will reboot and will use the new settings to connect to the internet and provided MQTT Broker.</p>
+<h3 id="status-led-blink-behavior">Status LED Blink Behavior</h3>
+<p>The Status LED shows the device state by behaving differently in different states. The following describes the details:</p>
+<table>
+<thead>
+<tr>
+<th>LED Blink Behavior</th>
+<th>Device State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant short Blinks</td>
+<td>In boot sequence</td>
+</tr>
+<tr>
+<td>Constant very short Blinks</td>
+<td>Looking for MQTT broker</td>
+</tr>
+<tr>
+<td>Three Blinks: 100ms On and 80ms Off</td>
+<td>Ping response</td>
+</tr>
+<tr>
+<td>Constant long Blinks / Heartbeat</td>
+<td>In normal state, connected to Internet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-on-serial-port-and-mqtt">Log on Serial Port and MQTT</h3>
+<p>The device sends log messages to serial port of all system and data activity, and send some of data activity to MQTT log topic defined above. Log on serial port is a great way to troubleshoot and diagnose any problems.</p>
+<h3 id="public-mqtt-broker-for-testing">Public MQTT Broker for Testing</h3>
+<p>You can use any public MQTT Broker such as <code>broker.hivemq.com</code> at standard port <code>1883</code> for testing purposes in device settings and Desktop and Mobile MQTT client. More details can be found at <a href="https://www.hivemq.com/public-mqtt-broker/">https://www.hivemq.com/public-mqtt-broker/</a>.</p>
+<p>You can just use their web based MQTT client at <a href="http://www.hivemq.com/demos/websocket-client/">http://www.hivemq.com/demos/websocket-client/</a> and subscribe to the MQTT topic <code>devices/esp01/#</code> to listen to all communications from this device. Make sure to use Websocket port <code>8000</code> when connecting to public MQTT broker using the web based client.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="flutter-app.html" class="btn btn-neutral" title="Flutter App"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="flutter-app.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

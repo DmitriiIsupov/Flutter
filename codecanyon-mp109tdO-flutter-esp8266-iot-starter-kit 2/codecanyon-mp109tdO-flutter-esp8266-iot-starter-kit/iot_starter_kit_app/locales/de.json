@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "die Einstellungen",
+    "menuAbout": "Über",
+    "menuHelp": "Hilfe",
+    "popupBackToExit": "Zum Verlassen erneut zurückdrücken",
+    "deviceUptime": "Gerät Uptime"
+  },
+  "ScreenHome": {
+    "homeTitle": "Zuhause",
+    "graphTempLabel": "Temperatursensor",
+    "graphHumidLabel": "Feuchtesensor",
+    "buttonPing": "Ping Geräte",
+    "buttonBeep": "Beep Geräte",
+    "buttonPort1On": "Öffnen",
+    "buttonPort1Off": "Schließen",
+    "buttonPort2On": "Öffnen",
+    "buttonPort2Off": "Schließen",
+    "logConnectionStatus": "Verbindungsstatus"
+  },
+  "ScreenAbout": {
+    "aboutTitle": "Über",
+    "appDescription": "Anwendung auf die Anzeigedaten und Steuerung und ESP basiert IoT-Gerät.",
+    "copyright": "© My IoT Company® - Rechte vorbehalten.",
+    "license": "App von My IoT Company® wird unter folgender Lizenz veröffentlicht: Creative Commons Attribution – Non Comercial – No derivatives 4.0 International License.",
+    "sayHelloLabel": "Sag Hallo",
+    "emailAddress": "hello@orison.biz",
+    "emailSubject": "Hallo",
+    "privacyPolicyLabel": "Datenschutz-Bestimmungen",
+    "privacyPolicyUrl": "https://orison.biz/privacy-policy/?lang=de",
+    "viewReadMe": "Readme",
+    "viewChangelog": "Ansicht Changelog",
+    "viewLicense": "anzeigen von Lizenz",
+    "openSourceLicenses": "Open-Source-Lizenzen"
+  },
+  "ScreenSettings": {
+    "settingsTitle": "die Einstellungen",
+    "sectionUISettings": "UI-Einstellungen",
+    "languageLabel": "Sprache",
+    "enableDarkTheme": "Aktivieren Dark Theme",
+    "sectionMqttSettings": "MQTT Einstellungen",
+    "mqttBroker": "MQTT Broker",
+    "mqttShowLogEntries": "Anzeigen Geräteprotokolleinträge",
+    "mqttBrokerError1": "Broker darf nicht leer sein",
+    "mqttPort": "MQTT Hafen",
+    "mqttLogin": "MQTT Anmeldung",
+    "mqttPassword": "MQTT Passwort",
+    "mqttCredentials": "MQTT Credentials",
+    "mqttPortError1": "Port darf nicht leer sein",
+    "mqttPortError2": "Port muss eine Zahl sein",
+    "mqttPortError3": "Port kann nicht größer als 65535 sein",
+    "buttonSave": "sparen",
+    "buttonCancel": "Stornieren"
+  },
+  "ScreenHelp": {
+    "helpTitle": "Hilfe"
+  }
+}

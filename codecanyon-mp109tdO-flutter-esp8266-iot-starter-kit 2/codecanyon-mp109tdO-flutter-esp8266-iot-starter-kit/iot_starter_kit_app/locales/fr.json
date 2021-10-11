@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "Réglages",
+    "menuAbout": "Sur",
+    "menuHelp": "Aidez-moi",
+    "popupBackToExit": "Appuyez à nouveau pour quitter",
+    "deviceUptime": "dispositif Uptime"
+  },
+  "ScreenHome": {
+    "homeTitle": "Accueil",
+    "graphTempLabel": "Capteur de température",
+    "graphHumidLabel": "Capteur d'humidité",
+    "buttonPing": "Dispositif ping",
+    "buttonBeep": "Dispositif bip",
+    "buttonPort1On": "Ouvert",
+    "buttonPort1Off": "proche",
+    "buttonPort2On": "Ouvert",
+    "buttonPort2Off": "proche",
+    "logConnectionStatus": "Statut de connexion"
+  },
+  "ScreenAbout": {
+    "aboutTitle": "À propos",
+    "appDescription": "Application à l'affichage des données et de contrôle et IPSEC basé appareil IdO.",
+    "copyright": "© My IoT Company® - Tous droits réservés.",
+    "license": "App pour My IoT Company® est distribuée sous Licence Creative Commons Attribution – Pas d’utilisation commerciale – Sans oeuvre dérivée 4.0 Internationale.",
+    "sayHelloLabel": "Dis bonjour",
+    "emailAddress": "hello@orison.biz",
+    "emailSubject": "Bonjour",
+    "privacyPolicyLabel": "Politique de confidentialité",
+    "privacyPolicyUrl": "https://orison.biz/privacy-policy/?lang=fr",
+    "viewReadMe": "Voir readme",
+    "viewChangelog": "Voir la log des modifications",
+    "viewLicense": "Voir la license",
+    "openSourceLicenses": "Licences Open Source"
+  },
+  "ScreenSettings": {
+    "settingsTitle": "Réglages",
+    "sectionUISettings": "l'interface utilisateur Paramètres",
+    "languageLabel": "Langue",
+    "enableDarkTheme": "Activer Dark Theme",
+    "sectionMqttSettings": "MQTT Réglages",
+    "mqttBroker": "MQTT Courtier",
+    "mqttShowLogEntries": "Afficher les entrées du journal périphérique",
+    "mqttBrokerError1": "Le courtier ne peut être vide",
+    "mqttPort": "MQTT Port",
+    "mqttLogin": "MQTT Connexion",
+    "mqttPassword": "MQTT Mot de passe",
+    "mqttCredentials": "pouvoirs MQTT",
+    "mqttPortError1": "Port ne peut pas être vide",
+    "mqttPortError2": "Port doit être un nombre",
+    "mqttPortError3": "Port ne peut pas être supérieure à 65535",
+    "buttonSave": "sauvegarder",
+    "buttonCancel": "Annuler"
+  },
+  "ScreenHelp": {
+    "helpTitle": "Aidez-moi"
+  }
+}

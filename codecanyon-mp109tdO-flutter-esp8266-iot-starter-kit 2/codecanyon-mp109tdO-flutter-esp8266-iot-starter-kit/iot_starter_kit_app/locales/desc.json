@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "menuSettings": "",
+    "menuAbout": "",
+    "menuHelp": "",
+    "popupBackToExit": "",
+    "deviceUptime": ""
+  },
+  "ScreenHome": {
+    "homeTitle": "",
+    "graphTempLabel": "",
+    "graphHumidLabel": "",
+    "buttonPing": "",
+    "buttonBeep": "",
+    "buttonPort1On": "",
+    "buttonPort1Off": "",
+    "buttonPort2On": "",
+    "buttonPort2Off": "",
+    "logConnectionStatus": ""
+  },
+  "ScreenAbout": {
+    "aboutTitle": "",
+    "appDescription": "",
+    "copyright": "",
+    "license": "",
+    "sayHelloLabel": "",
+    "emailAddress": "email address used in the app",
+    "emailSubject": "email subject for mail from the app",
+    "privacyPolicyLabel": "",
+    "privacyPolicyUrl": "link to privacy policy page",
+    "viewReadMe": "",
+    "viewChangelog": "",
+    "viewLicense": "",
+    "openSourceLicenses": ""
+  },
+  "ScreenSettings": {
+    "settingsTitle": "",
+    "sectionUISettings": "",
+    "languageLabel": "",
+    "enableDarkTheme": "Enable Dark Theme",
+    "sectionMqttSettings": "MQTT Settings",
+    "mqttBroker": "MQTT Broker",
+    "mqttShowLogEntries": "Show log entries on home list",
+    "mqttBrokerError1": "Broker cannot be empty",
+    "mqttPort": "MQTT Port",
+    "mqttLogin": "MQTT Login",
+    "mqttPassword": "MQTT Password",
+    "mqttCredentials": "MQTT Credentials",
+    "mqttPortError1": "Port cannot be empty",
+    "mqttPortError2": "Port must be a number",
+    "mqttPortError3": "Port cannot be greater than 65535",
+    "buttonSave": "Save",
+    "buttonCancel": "Cancel"
+  },
+  "ScreenHelp": {
+    "helpTitle": ""
+  }
+}
